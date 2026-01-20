@@ -1,4 +1,4 @@
-Night Phone Usage → Sleep Disorder Predictor
+## Night Phone Usage → Sleep Disorder Predictor
 
 A beginner‑friendly **Machine Learning + Flask** project that predicts sleep disorder levels based on night‑time mobile phone usage and sleep habits.
 This project uses **synthetic data**, a **rule‑based labeling system**, and a **Logistic Regression model** wrapped inside a **scikit‑learn pipeline**.
