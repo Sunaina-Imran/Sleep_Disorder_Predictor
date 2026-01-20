@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Night Phone Usage → Sleep Disorder Predictor</title>
+    <style>
+     
+        body {
+            background-color: #d3d3d3; /* Light Grey */
+            color: #000000;           /* Black */
+            font-family: Arial, sans-serif;
+            
+           
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Adds a container look to the form */
+        form {
+            background: #f9f9f92c;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            width: 350px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box; 
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        h2 {
+            margin-top: 20px;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Night Phone Usage → Predictor</h1>
+
+    <form method="post">
+        <label>Phone Usage After 10PM (mins):</label>
+        <input type="number" name="phone_usage_after_10pm" required><br><br>
+
+        <label>Blue Light Hours:</label>
+        <input type="number" step="0.1" name="blue_light_hours" required><br><br>
+
+        <label>Sleep Duration (hours):</label>
+        <input type="number" step="0.1" name="sleep_duration" required><br><br>
+
+        <label>Phone Pickups at Night:</label>
+        <input type="number" name="phone_pickups_night" required><br><br>
+
+        <label>Night Scrolling:</label>
+        <select name="night_scrolling">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br><br>
+
+        <label>Wake Up Tired:</label>
+        <select name="wake_up_tired">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br><br>
+
+        <label>Attention Span:</label>
+        <select name="attention_span">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select><br><br>
+
+        <label>Breaks Taken:</label>
+        <select name="breaks_taken">
+            <option value="rare">Rare</option>
+            <option value="sometimes">Sometimes</option>
+            <option value="frequent">Frequent</option>
+        </select><br><br>
+
+        <button type="submit">Predict Sleep Disorder</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
