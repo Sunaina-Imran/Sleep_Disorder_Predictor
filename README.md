@@ -125,6 +125,10 @@ The Flask app provides a simple web interface where:
 
 ⚠️ Note: The dataset is synthetic and created purely for educational purposes.
 
+Author
+Sunaina Imran
+Machine Learning & Python Enthusiast
+
 
 
 
